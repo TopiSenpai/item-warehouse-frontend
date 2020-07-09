@@ -25,7 +25,7 @@ const authKey = {
     return localStorage.getItem(AUTH_KEY);
   },
   set set(key) {
-    if (key == undefined) {
+    if (key == undefined || key == "") {
       localStorage.removeItem(AUTH_KEY);
     } else {
       localStorage.setItem(AUTH_KEY, key);

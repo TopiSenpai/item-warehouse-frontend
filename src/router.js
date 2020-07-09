@@ -1,6 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "./views/Home";
+import ViewWarehouses from "./views/ViewWarehouses";
+import ViewWarehouseItems from "./views/ViewWarehouseItems";
+import ViewWarehouseItem from "./views/ViewWarehouseItems";
 import NotFound from "./views/NotFound";
 
 Vue.use(VueRouter);
@@ -8,12 +10,19 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    component: Home,
-    title: "Teilelager",
+    component: ViewWarehouses,
   },
   {
-    path: "/items",
-    component: ItemList,
+    path: "/warehouses",
+    component: ViewWarehouses,
+  },
+  {
+    path: "/warehouses/:warehouseId",
+    component: ViewWarehouseItems,
+  },
+  {
+    path: "/warehouses/:warehouseId/items/:itemId",
+    component: ViewWarehouseItem,
   },
   {
     path: "*",
