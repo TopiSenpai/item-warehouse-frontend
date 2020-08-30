@@ -3,9 +3,7 @@
     <v-app-bar app clipped-left>
       <v-app-bar-nav-icon @click="drawer = !drawer" />
 
-      <v-app-bar-
-
-      <v-spacer />
+      <v-app-bar- <v-spacer />
 
       <v-btn icon @click="switchTheme">
         <v-icon>brightness_4</v-icon>
